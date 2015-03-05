@@ -1,0 +1,6 @@
+.DS_Store
+.idea/*
+log/*.log
+tmp/**
+node_modules/
+.sass-cache
