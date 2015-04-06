@@ -10,7 +10,7 @@ If you're not familiar with RevealJS the following tips might prove helpful. Try
 
 ## View the presentation
 
-[http://cjus.github.io/modern-web-development-presentation](http://cjus.github.io/modern-web-development-presentation)
+[http://cjus.github.io/pixijs-presentation](http://cjus.github.io/pixijs-presentation)
 
 ## Print the presentation
 
