@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>A Look at Pixi.js</title>
-  <meta name="description" content="Pixi.JS Presentation">
+  <title>An Introduction to NodeJS</title>
+  <meta name="description" content="NodeJS Presentation">
   <meta name="author" content="Carlos Justiniano">
   <meta name="apple-mobile-web-app-capable" content="yes"/>
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
@@ -42,9 +42,9 @@
 <!-- Title slide  ----------------------------------------------------------------------------------------------------->
 <!-- ------------------------------------------------------------------------------------------------------------------>
 <section data-transition="cube" data-transition-speed="medium">
-  <img style="border: 0; padding: 20px;" src="images/pixijs-title.jpg">
+  <img style="border: 0; padding: 20px;" src="images/node.png">
 
-  <h2>A Look at Pixi.js</h2>
+  <h2>An Introduction to NodeJS</h2>
   <p>
     <small>Presented by <a href="http://cjus.me" target="_blank">Carlos Justiniano</a> /
       <a href="http://www.meetup.com/Hudson-County-JavaScript-Meetup/" target="_blank">HC.JS</a> /
@@ -52,9 +52,6 @@
   </p>
   <aside class="notes" data-markdown="">
     ---
-    > In this presentation we'll take a look at the Pixi.js, a library for handling graphics rendering.
-    > This presentation is open source and available on Github.
-    > If you find any issue with this presentation drop me an email or better yet, issue a pull request.
   </aside>
 </section>
 
@@ -63,487 +60,93 @@
 <!-- About me  -------------------------------------------------------------------------------------------------------->
 <!-- ------------------------------------------------------------------------------------------------------------------>
 <section data-transition="fade" data-transition-speed="medium">
-  <img style="width: 100px; height: 100px; border: 0; padding: 10px;" src="images/DSC08211-201502.jpg">
-
   <h3>About me</h3>
 
   <ul>
     <li>Carlos Justiniano, HC.JS founder and a long-time programmer</li>
-    <li>Games programmer in the 90s</li>
-    <li>Wrote my own sprite animation library and game engine in C++</li>
-    <li>I posted on Github in 2010: https://github.com/cjus/s34mme</li>
+    <li>A fullstack developer using NodeJS since 2011</li>
+    <li>Developed Node applications in production use</li>
   </ul>
 
   <aside class="notes" data-markdown="">
     ---
-    A few words about me as they pertain to this presentation.
-
-    I'm Carlos Justiniano, HCJS founder and a long time programmer.
-
-    In my earlier life
-
-    as a games programmer I wrote a game engine which featured sprite animation for use on earlier versions of Windows.
-
-    In 2010 I posted the code on GitHub.
   </aside>
 </section>
 
 <!-- ------------------------------------------------------------------------------------------------------------------>
-<!-- About me  -------------------------------------------------------------------------------------------------------->
+<!-- NodeJS=Node ------------------------------------------------------------------------------------------------------>
 <!-- ------------------------------------------------------------------------------------------------------------------>
-<section data-transition="fade" data-transition-speed="medium">
-  <img style="width: 600px; border: 0; padding: 10px;" src="images/DisneyID.png">
-  <p>I was also a contractor at Disney Interactive "back in the day"</p>
+<section data-transition="cube" data-transition-speed="slow">
+  <h2>NodeJS = Node</h2>
   <aside class="notes" data-markdown="">
     ---
-    I was a former contractor at Disney Interactive working on a game engine.
+    In this talk we're going to discuss the increasingly popular Node.JS application platform.
+
+    From here on out I'm going to refer to Node.JS simply as "Node", with a capital 'N'.
   </aside>
 </section>
 
 <!-- ------------------------------------------------------------------------------------------------------------------>
-<!-- What is it? ------------------------------------------------------------------------------------------------------>
+<!-- What is NodeJS? ------------------------------------------------------------------------------------------------------>
 <!-- ------------------------------------------------------------------------------------------------------------------>
 <section data-transition="fade" data-transition-speed="slow">
-  <h3>So, what's this Pixi.js thing?</h3>
+  <h3>So, what is Node?</h3>
   <ul>
-    <li>It's a JavaScript based graphics rendering library for HTML5</li>
-    <li>It works across all modern browsers on both desktop and mobile</li>
-    <li>It will use hardware accelerated WebGL or fallback to HTML5 Canvas</li>
+    <li>"Node.js is an open source, cross-platform runtime environment for server-side and networking applications". -
+      Wikipedia
+    </li>
+    <li>Also an application and platform for building application - for use on and off the net</li>
+    <li>An application optimized for performing high speed input/output operations</li>
   </ul>
   <aside class="notes" data-markdown="">
     ---
-    Pixi.js is a JavaScript rendering library for HTML5. It allows you to manage graphic objects and to animate them in
-    various ways. 
-    
-    It also works across all modern browsers on both desktop and mobile.
-    
-    As an aside: the term "renderer" is used to describe a tool which displays and allows for the manipulation of graphics
-    before they are shown on a display.
+    Node is software which allows programmers to build applications, using JavaScript, for use on and off the net.
 
-    Pixi.js renders graphics using WebGL if the target browser supports it, or otherwise falls back to canvas rendering
-    if necessary. 
+    It's often thought of as a tool for building backend server applications, however, it's actually much more than that.
 
-    The result is that Pixi.js leverages hardware accelerated WebGL for maximum speed. For anyone who doesn't know what
-    WebGL is, it stands for Web Graphics Library, and it's the web descendant of OpenGL which has been used for decades
-    in popular PC and console games.
+    The Node software essentially hosts a JavaScript execution engine and provides built-in functionality for
+    performing highly optimized input/output operations. These I/O operations cover things like reading and writing
+    files, and network operations such as accepting connections and making remote requests. Using JavaScript and Node's
+    I/O features allows developers to build applications which can interact with the current machine and its local
+    resources, while allowing communication between hosted applications and networked resources.
 
-    A key benefit of Pixi.js is that it allows developers to leverage the power of hardware acceleration without prior
-    knowledge of webGL.
+    We'll see further examples of Node in action later in this presentation.
   </aside>
 </section>
 
 
 <!-- ------------------------------------------------------------------------------------------------------------------>
-<!-- What it's not? --------------------------------------------------------------------------------------------------->
+<!-- Who created Node ------------------------------------------------------------------------------------------------->
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<section data-transition="cube" data-transition-speed="slow">
+  <h2>Node's early beginnings</h2>
+  <table border="1" width="100%">
+    <tr>
+      <td>
+        <img style="border: 0; padding: 5px; width: 60%" src="images/Ryan_Dahl.png">
+      </td>
+      <td>
+        <ul>
+          <li>Node.js was created by Ryan Dahl when it was first published for Linux use in 2009</li>
+          <li>Ryan debut Node at the November 2009 European JSConf where it received a standing ovation</li>
+          <li>Node's continued development was sponsored by Joyent the company where Ryan worked</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+  <aside class="notes" data-markdown="">
+    ---
+  </aside>
+</section>
+
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<!-- Node's popularity ------------------------------------------------------------------------------------------------>
 <!-- ------------------------------------------------------------------------------------------------------------------>
 <section data-transition="fade" data-transition-speed="slow">
-  <h3>What Pixi.js is not</h3>
+  <h3>Node's popularity</h3>
+  <img style="border: 0; padding: 20px; width: 70%" src="images/NodesPopularity.png">
   <ul>
-    <li>Pixi.js is not a game engine or game framework</li>
-    <li>It only has support for rendering and not things like collision detection and physics</li>
-    <li>Can be used as the basis of game engines / frameworks, such as Phaser (https://phaser.io/)</li>
-  </ul>
-  <aside class="notes" data-markdown="">
-    ---
-    Pixi.js is not a game engine.  For example, a specific game engine or framework might include support for things like collision
-    detection between objects, physics interactions, and support for a game's artificial intelligence. Pixi.js does not.
-
-    Instead, Pixi focuses on managing assets and rendering.  It can be used as the the renderer for a full-fledge game engines.
-
-    The Phaser game engine is an example of a framework that uses Pixi for its rendering.
-  </aside>
-</section>
-
-
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<!-- Pixi recap ------------------------------------------------------------------------------------------------------->
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<section data-transition="fade" data-transition-speed="slow">
-  <h3>Pixi recap</h3>
-  <ul>
-    <li>Focuses on managing graphics and displaying them (rendering)</li>
-    <li>Allows you to do things like: load images, move them, rotate them, change their color, opacity and tint</li>
-    <li>You can also add graphic objects to a container and move the container as a unit</li>
-    <li>In short, you can use Pixi to animate scenes of graphical objects</li>
-  </ul>
-  <aside class="notes" data-markdown="">
-    ---
-    So just a quick recap. Pixi is a renderer which allows you to manage graphics.
-    You can do things like loading iamges, moving them about, changing their color, opacity and tint.
-    You can create relationships between objects so that moving one object might move related object.
-    You can also create a container for object and treat them in a uniform manner.
-    So in short, Pixi allows you to manage a scene containing graphical objects.
-  </aside>
-</section>
-
-
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<!-- Pixi.js history --------------------------------------------------------------------------------------------------->
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<section data-transition="fade" data-transition-speed="slow">
-  <h3>Pixi.js History</h3>
-  <ul>
-    <li>Launched in February 2013 by Matt Groves of GoodBoy Digital</li>
-    <li>Has improved steadily since then to include many impressive features</li>
-    <li>Used in project for clients like Disney, PBS Kids, BBC, McDonald's and many others</li>
-    <li>Winner of numerous industry awards</li>
-  </ul>
-  <aside class="notes" data-markdown="">
-    ---
-    In February 2013, Matt Groves of GoodBoy Digital announced Pixi.JS in a blog post and Github upload.
-    GoodBoy Digital is an HTML5 Games Consultancy in London with an impressive list of clients.
-
-    During the past two years, Pixi.JS has grown to include a host of amazing features making it ideal for desktop
-    and mobile development on smartphones and tablets.
-  </aside>
-</section>
-
-
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<!-- Pixi Demo 01 ----------------------------------------------------------------------------------------------------->
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<section data-transition="fade" data-transition-speed="slow">
-  <h3>Pixi Demo 01</h3>
-  <!--<iframe width="620" height="380" src="http://www.goodboydigital.com/Pixi.js/examples/12-3/" frameborder="0" scrolling="no"></iframe>-->
-  <img style="border: 0; padding: 10px; width:620px; height: 380px;" src="images/pixi-demo-12-3.png" >
-  <a href="http://www.pixijs.com/examples/" target="_blank">http://www.pixijs.com/examples/</a>
-  <aside class="notes" data-markdown="">
-    ---
-    So here's an example of Pixi.js in action. What you're seeing is not an animated gif or movie clip.
-    It's actually a scene created and managed using Pixi.js.
-    The effect you're seeing is known in the game industry as parallax scrolling and this style of game is know as a
-    platform game.
-  </aside>
-</section>
-
-
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<!-- Pixi Demo 02 ----------------------------------------------------------------------------------------------------->
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<section data-transition="fade" data-transition-speed="slow">
-  <h3>Pixi Demo 02</h3>
-  <!--<iframe width="640" height="480" src="http://www.goodboydigital.com/Pixi.js/bunnymark/" frameborder="0" scrolling="no"></iframe>-->
-  <img style="border: 0; padding: 10px; width: 620px; height: 380px;" src="images/pixi-demo-18.png">
-  <a href="http://www.pixijs.com/examples/" target="_blank">http://www.pixijs.com/examples/</a>
-  <aside class="notes" data-markdown="">
-    ---
-    And here's another demo.
-
-    Notice we start off with two bunnies.  Pixi.js is being used to load a single bunny image and then creates two bunnies sprites.
-
-    A sprite is a container for an image.
-
-    Because Pixi doesn't include a physics engine, the code to handle the sprite velocity, direction and rotation is written outside of Pixi.
-
-    Ok, let's get this party started.  After we click we see a lot more bunnies, each being managed independently.
-  </aside>
-</section>
-
-
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<!-- HTML5 canvas ----------------------------------------------------------------------------------------------------->
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<section data-transition="fade" data-transition-speed="slow">
-  <h3>What about the HTML5 &lt;canvas&gt;?</h3>
-  <ul>
-    <li>Canvas is a element for creating graphics using JavaScript</li>
-    <li>Originally introduced by Apple in 2004</li>
-    <li>Between 2005 and 2006 it was included in other browsers</li>
-    <li>Standardized by the Web Hypertext Application Technology Working Group</li>
-  </ul>
-  <aside class="notes" data-markdown="">
-    ---
-    Before we go further into Pixi.js you might be wondering about the HTML5 Canvas element.
-
-    If you haven't worked with Canvas, it's basically an HTML5 element that defines an area on a web page which can be used to draw and display images using JavaScript.
-
-    It was originally introduced by Apple in 2004, then later added by other browsers during 2005 and 2006.
-
-    It was later standardized by the Web Hypertext Application Technology Working Group as a web standard.
-  </aside>
-</section>
-
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<!-- HTML5 canvas ----------------------------------------------------------------------------------------------------->
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<section data-transition="fade" data-transition-speed="slow">
-  <h3>HTML5 &lt;canvas&gt;?</h3>
-  <p>An HTML5 element "for dynamic, scriptable rendering of 2D shapes and bitmap images. It is a low level,
-    procedural model that updates a bitmap and does not have a built-in scene graph." - wikipedia</p>
-  <aside class="notes" data-markdown="">
-    ---
-    According to Wikipedia, Canvas is an HTML5 element "for dynamic, scriptable rendering of 2D shapes and bitmap
-    images. It is a low level, procedural model that updates a bitmap and does not have a built-in scene graph."
-
-    A key point in that definition is that Canvas is low-level, lower-level than Pixi.js in some ways.
-
-    Canvas doesn't have a built-in scene graph or a way of managing graphic elements for display. That's an implementation
-    detail left to you, the developer.
-
-    Let's take a brief look at canvas.
-  </aside>
-</section>
-
-
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<!-- Canvas Demo ------------------------------------------------------------------------------------------------------>
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<section data-transition="fade" data-transition-speed="slow">
-  <h3>Canvas Demo</h3>
-  <iframe src="canvas_demo01.html" width="480" height="360"></iframe>
-  <aside class="notes" data-markdown="">
-    ---
-    This is an HTML5 canvas demo which randomly displays blue and red spheres.
-  </aside>
-</section>
-
-
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<!-- Canvas Demo Code ------------------------------------------------------------------------------------------------->
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<section data-transition="fade" data-transition-speed="slow">
-  <iframe width="1024" height="400" src="exportToHTML/canvas_demo01.html" frameborder="1"
-          scrolling="yes"></iframe>
-  <aside class="notes" data-markdown="">
-    ---
-    In this HTML markup, on line 8, we specify the canvas element with an ID of "canvas-demo-01".
-    Then we load our JS file, on line 9, to work with the canvas element.
-  </aside>
-</section>
-
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<!-- Canvas Demo Code ------------------------------------------------------------------------------------------------->
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<section data-transition="fade" data-transition-speed="slow">
-  <iframe width="1024" height="600" src="exportToHTML/canvas_demo01.js.html" frameborder="1"
-          scrolling="yes"></iframe>
-  <aside class="notes" data-markdown="">
-    ---
-    First we access the canvas element by its ID on line 18.
-
-    Next we retrieve a drawing context for use with drawing on line 19.
-
-    We then setup a a main loop, on line 24, where we'll draw each frame of animation.  Notice the call to requestAnimationFrame, on line 33, which essentially calls back to our main loop.
-
-    requestAnimationFrame is an API which knows when the screen is about to be refreshed at a hardware level and only called our main loop during a screen redraw cycle.  This prevents us from using a timer which wouldn't be as fast or efficient.
-
-    So the mainloop first fills the background with a solid black colored rectangle.  Then it enters a loop to display twenty spheres at random locations.
-
-    A quick note on this rendering loop thing.  The creation of a rendering look and the syncing to the display refresh rate is
-    fundamental to almost all games.  We update the game world and update the display based on screen refresh. In JavaScript, this is assisted by the requestAnimationFrame which invokes are rendering code.
-
-    And that's HTML5 animation in a quick pass.  Another key take-away here is that we're managing both the drawing and redrawing of spheres using low-level graphics APIs.
-
-    We're not thinking about a sphere as an object which has a position and other properties.
-
-    That's really where Pixi.js comes in - it abstracts many of the details you'd otherwise have to deal with - even for the simplest of tasks.
-  </aside>
-</section>
-
-
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<!-- My recent involvement with Pixi ---------------------------------------------------------------------------------->
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<section data-transition="fade" data-transition-speed="slow">
-  <h3>My recent involvement with Pixi</h3>
-  <ul>
-    <li>I was recently asked to advise for two projects:</li>
-    <li>An authoring system for children's books and a polling application plugin</li>
-    <li>I found Pixi to be ideal for both projects</li>
-  </ul>
-  <aside class="notes" data-markdown="">
-    ---
-    Friends of mine who are building two very different applications. One is an authoring system for children's books,
-    and the other is a polling application plugin for websites.
-
-    In both cases they needed to manage the display of graphics and animation.
-
-    I recommended they use Pixi.js and they asked me to help with the coding.
-
-    Here's a video clip of the rendering component for the childen's book authoring system.
-  </aside>
-</section>
-
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<!-- Canvas Demo Code ------------------------------------------------------------------------------------------------->
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<section data-transition="fade" data-transition-speed="slow">
-  <iframe width="800" height="600" src="https://www.youtube.com/embed/BZtCZWiDTNY" frameborder="0"
-          allowfullscreen></iframe>
-  <aside class="notes" data-markdown="">
-    ---
-  </aside>
-</section>
-
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<!-- Under the hood --------------------------------------------------------------------------------------------------->
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<section data-transition="fade" data-transition-speed="slow">
-  <h3>Under the hood</h3>
-  <aside class="notes" data-markdown="">
-    ---
-    Let's look at some of the Pixi code used to achieve that level of functionality.
-  </aside>
-</section>
-
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<!-- Pixi code sample ------------------------------------------------------------------------------------------------->
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<section data-transition="fade" data-transition-speed="slow">
-  <iframe width="1024" height="400" src="exportToHTML/directive.js.html" frameborder="1"
-          scrolling="yes"></iframe>
-  <aside class="notes" data-markdown="">
-    ---
-    One of the first things we do with Pixi (after we load the pixi.js script) is to create the stage object.  We do this on line 41.
-
-    The stage is where graphics appear.  You can add and remove graphic objects from the stage at will.
-
-    The next line (42) we ask Pixi to create a renderer.  The renderer will do the work of displaying graphic elements.
-
-    So because I work in AngularJS, I'm saving the stage and renderer on the scope - for later use on lines 44 and 45.
-
-    On line 52 I call requestAnimFrame.  This will initialize the main rendering loop.
-
-    We're now ready to load images and create more feature rick sprite objects.
-  </aside>
-</section>
-
-
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<!-- Pixi code sample ------------------------------------------------------------------------------------------------->
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<section data-transition="fade" data-transition-speed="slow">
-  <iframe width="1024" height="600" src="exportToHTML/loading_images.js.html" frameborder="1"
-          scrolling="yes"></iframe>
-  <aside class="notes" data-markdown="">
-    ---
-    In this code fragment, on line 115, I use the PIXI.ImageLoader to, you guessed it!
-
-    Load an image.
-
-    When an image is loaded, a texture is created and then a sprite is created on line 118.
-    The idea here is that you only want to load a specific image once and use it to create how ever many sprites you need.
-    So the texture (image data) is placed in a texture cache.
-
-    I then proceed to initialize the sprites position relative to the stage.
-  </aside>
-</section>
-
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<!-- Pixi code sample ------------------------------------------------------------------------------------------------->
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<section data-transition="fade" data-transition-speed="slow">
-  <iframe width="1024" height="600" src="exportToHTML/adding_events.js.html" frameborder="1"
-          scrolling="yes"></iframe>
-  <aside class="notes" data-markdown="">
-    ---
-    In this next bit of code I'll share how I setup events on sprite object using Pixi.js.
-
-    Firstly, this function accepts a sprite object.
-
-    On lines 146 and 148 I set the sprites properties to respond to mouse and touch events.
-
-    An important point here is that devices like phones and tablets have touch events, whereas desktop browsers have mouse events.
-
-    Another important point is that not all sprites in your scene will need to respond to mouse and touch events.
-
-    So setting this only on sprites that need it is an optimization!
-
-    In line 151 I'm assigning an anonymous function to the sprite's mousedown and touchstart properties.  On line 155 I also flag the sprite as being draggable.
-
-    Lines 164 through 170 turns off dragging during mouseup, mouseupoutside, touchend and touchendoutside events.
-
-    Starting on line 173 I handle the mousemove and touchmove event to update the sprites position.
-
-  </aside>
-</section>
-
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<!-- Quick recap ------------------------------------------------------------------------------------------------------>
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<section data-transition="fade" data-transition-speed="slow">
-  <h3>Quick recap</h3>
-  <ul>
-    <li>Unlike the HTML Canvas, Pixi.js works with objects such as sprites and a stage</li>
-    <li>The result is a higher level of abstraction</li>
-  </ul>
-  <aside class="notes" data-markdown="">
-    ---
-    Unlike the HTML Canvas, Pixi.js allows you to work with objects such as sprites and a stage.
-
-    This is because Pixi.js helps you manage your scene, while allowing you to work at a higher level of abstraction.
-  </aside>
-</section>
-
-
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<!-- Pixi and friends ------------------------------------------------------------------------------------------------->
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<section data-transition="fade" data-transition-speed="slow">
-  <h3>Pixi and friends</h3>
-  <ul>
-    <li>Pixi.js focuses on rendering and managing your scene graph</li>
-    <li>So, it's only part of a larger picture when it comes to building a product</li>
-    <li>Lots of tools work with Pixi to add realistic physics, see: matter.js, physics.js</li>
-    <li>There are also authoring tools which output files in a format that Pixi can work with - see: TexturePacker and
-      Spine</li>
-  </ul>
-  <aside class="notes" data-markdown="">
-    ---
-    As we've seen, Pixi.js is only one part of the code that a game or interactive module might need.
-
-    There are lots of tools that you can use in conjunction with Pixi.js.
-
-    Checkout the matter.js and Physics.JS engines.
-
-    There are also design and authoring tools which produce files which Pixi an work with: See TexturePacker and Spine.
-
-    I was super impressed with Spine...
-  </aside>
-</section>
-
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<!-- Spine demo ------------------------------------------------------------------------------------------------------->
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<section data-transition="fade" data-transition-speed="slow">
-  <iframe width="853" height="480" src="https://www.youtube.com/embed/etEnSsZTsf0" frameborder="0"
-          allowfullscreen></iframe>
-  <a href="https://www.youtube.com/embed/etEnSsZTsf0" target="_blank">https://www.youtube.com/embed/etEnSsZTsf0</a>
-  <aside class="notes" data-markdown="">
-    ---
-    http://esotericsoftware.com/spine-in-depth#What-is-Spine
-  </aside>
-</section>
-
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<!-- Pixi Demo 03 ----------------------------------------------------------------------------------------------------->
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<section data-transition="fade" data-transition-speed="slow">
-  <h3>Pixi Demo 03</h3>
-  <!--<iframe width="640" height="480" src="http://www.goodboydigital.com/pixijs/examples/12-3/" frameborder="0" scrolling="no"></iframe>-->
-  <img style="border: 0; padding: 10px; width: 620px; height: 380px;" src="images/pixi-demo-12.png">
-  <a href="http://www.pixijs.com/examples/" target="_blank">http://www.pixijs.com/examples/</a>
-  <aside class="notes" data-markdown="">
-    ---
-    Pixi.js can read spine output data to display animations.
-  </aside>
-</section>
-
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<!-- Pixi highlights -------------------------------------------------------------------------------------------------->
-<!-- ------------------------------------------------------------------------------------------------------------------>
-<section data-transition="fade" data-transition-speed="slow">
-  <h3>Pixi highlights</h3>
-  <ul>
-    <li>Dedicated rendering, super fast!</li>
-    <li>Multi-platform: use pixi on desktop and mobile devices</li>
-    <li>Support for multi-touch interactivity</li>
-    <li>Special visual effects using WebGL filters</li>
-    <li>Support spite sheets and spine data</li>
-    <li>Manage scene graph</li>
-    <li>Load assets locally and remotely via the web</li>
-    <li>Support for rendering text</li>
-    <li>Easy to use API, familiar interface for ex-flash developers</li>
+    <li>https://goo.gl/1CPmlS</li>
   </ul>
   <aside class="notes" data-markdown="">
     ---
@@ -551,15 +154,43 @@
 </section>
 
 <!-- ------------------------------------------------------------------------------------------------------------------>
-<!-- Pixi learn more -------------------------------------------------------------------------------------------------->
+<!-- What is NodeJS? -------------------------------------------------------------------------------------------------->
 <!-- ------------------------------------------------------------------------------------------------------------------>
 <section data-transition="fade" data-transition-speed="slow">
-  <h3>Learn more at: http://www.pixijs.com</h3>
+  <h3>Who uses Node?</h3>
+  <table border="1" width="100%">
+    <tr>
+      <td>
+        <ol>
+          <li>Backed by the Node.js Foundation</li>
+          <li>Supported by Google, Microsoft</li>
+        </ol>
+      </td>
+      <td>
+        <ul>
+          <li>Google</li>
+          <li>Microsoft</li>
+          <li>Netflix</li>
+          <li>Walmart</li>
+          <li>LinkedIn</li>
+          <li>Mozilla</li>
+          <li>PayPay</li>
+          <li>New York Time</li>
+          <li>Uber</li>
+          <li>And many many more...</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
   <aside class="notes" data-markdown="">
     ---
+    Node is backed by the Node.js Foundation (https://nodejs.org/foundation/) and supported by Google, Microsoft and
+    lots of other companies backed by a legion of open source developers the world over.
+
+    Here's a short list of companies using Node:
   </aside>
 </section>
-
 
 <!-- ------------------------------------------------------------------------------------------------------------------>
 <!-- Contact ---------------------------------------------------------------------------------------------------------->
@@ -647,3 +278,16 @@
 </script>
 </body>
 </html>
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<!-- What is NodeJS? ------------------------------------------------------------------------------------------------------>
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<!--<section data-transition="fade" data-transition-speed="slow">-->
+  <!--<h3>So, what is Node?</h3>-->
+  <!--<ul>-->
+  <!--</ul>-->
+  <!--<aside class="notes" data-markdown="">-->
+    <!-&#45;&#45;&#45;&#45;-->
+  <!--</aside>-->
+<!--</section>-->
