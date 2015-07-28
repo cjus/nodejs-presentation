@@ -206,12 +206,233 @@
 </section>
 
 <!-- ------------------------------------------------------------------------------------------------------------------>
-<!--  ------------------------------------------------------------------------------------------------------------>
+<!-- Getting started with Node ---------------------------------------------------------------------------------------->
 <!-- ------------------------------------------------------------------------------------------------------------------>
 <section data-transition="fade" data-transition-speed="slow">
-  <h3></h3>
+  <h3>Getting started with Node</h3>
 
   <ul>
+    <li>Download and Install Node for your machine at: https://nodejs.org/</li>
+    <li>Click on the big green Install button</li>
+  </ul>
+  <aside class="notes" data-markdown="">
+  </aside>
+</section>
+
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<!-- Confirming Node is installed ------------------------------------------------------------------------------------->
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<section data-transition="fade" data-transition-speed="slow">
+  <h3>Confirming Node is installed</h3>
+  <!--@formatter:off-->
+    <pre><code contenteditable style="font-size: 18px; margin-top: 20px;">
+      $ node --version
+      v0.12.7
+    </code></pre>
+  <!--@formatter:on-->
+  <aside class="notes" data-markdown="">
+  </aside>
+</section>
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<!-- Sample Code ------------------------------------------------------------------------------------------------------>
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<section data-transition="fade" data-transition-speed="slow">
+  <h3>Sample Code!</h3>
+  <ul>
+    <li>https://github.com/cjus/nodejs-presentation/tree/master/NodeJSProjects</li>
+  </ul>
+  <aside class="notes" data-markdown="">
+  </aside>
+</section>
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<!-- Sample Code: A really simple Node app ---------------------------------------------------------------------------->
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<section data-transition="fade" data-transition-speed="slow">
+  <h3>Sample Code: A really simple Node app</h3>
+  <ul>
+    <li>Demonstrates Node as a JavaScript execution engine</li>
+    <li>A node program can be a one line program</li>
+  </ul>
+  <!--@formatter:off-->
+    <pre><code contenteditable style="font-size: 18px; margin-top: 20px;">
+      console.log('Hello future Node developers!');
+    </code></pre>
+  <!--@formatter:on-->
+  <aside class="notes" data-markdown="">
+  </aside>
+</section>
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<!-- Sample Code: OSInfo ---------------------------------------------------------------------------------------------->
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<section data-transition="fade" data-transition-speed="slow">
+  <h3>Sample Code: OSInfo</h3>
+  <ul>
+    <li>Demos how to write a Node commandline program that accepts arguments</li>
+    <li>Demos calls to the Node process object for querying operating system and environment variables</li>
+    <li>Available here: https://github.com/cjus/nodejs-presentation/tree/master/NodeJSProjects/commandline</li>
+  </ul>
+  <aside class="notes" data-markdown="">
+  </aside>
+</section>
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<!-- Sample Code: WordCount ------------------------------------------------------------------------------------------->
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<section data-transition="fade" data-transition-speed="slow">
+  <h3>Sample Code: WordCount</h3>
+  <ul>
+    <li>Demos another commandline program</li>
+    <li>Demos how to read and process text files using Node</li>
+    <li>Demos how to use and write external Node modules</li>
+    <li>Available here: https://github.com/cjus/nodejs-presentation/tree/master/NodeJSProjects/commandline</li>
+  </ul>
+  <aside class="notes" data-markdown="">
+  </aside>
+</section>
+
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<!-- Sample Code: hello ----------------------------------------------------------------------------------------------->
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<section data-transition="fade" data-transition-speed="slow">
+  <h3>Sample Code: hello using Express.JS</h3>
+  <ul>
+    <li>Demos a simple Node application which responses to a web request with a text message</li>
+  </ul>
+  <!--@formatter:off-->
+  <pre><code contenteditable style="font-size: 18px; margin-top: 20px;">
+var http = require('http');
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello World\n');
+}).listen(1337, '127.0.0.1');
+console.log('Server running at http://127.0.0.1:1337/');
+  </code></pre>
+<!--@formatter:on-->
+  <aside class="notes" data-markdown="">
+  </aside>
+</section>
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<!-- Introducing Express ---------------------------------------------------------------------------------------------->
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<section data-transition="fade" data-transition-speed="slow">
+  <h3>Introducing Express</h3>
+
+  <ul>
+    <li>You can build incredibly powerful networking applications using Node and built-in networking features</li>
+    <li>However, as a backend web developer you don't want to write your own version of Apache or Nginx</li>
+    <li>Enter web frameworks, such as Express.JS</li>
+  </ul>
+  <aside class="notes" data-markdown="">
+  </aside>
+</section>
+
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<!-- Building web applications using Express -------------------------------------------------------------------------->
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<section data-transition="fade" data-transition-speed="slow">
+  <h3>Building web applications using Node</h3>
+  <ul>
+    <li>Express.JS isa Fast, unopinionated, minimalist web framework for Node.js</li>
+    <li>Express is a framework that handles much of the functionality found in web servers</li>
+    <li>Available at: http://expressjs.com/</li>
+  </ul>
+  <aside class="notes" data-markdown="">
+  </aside>
+</section>
+
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<!-- Installing Express  ---------------------------------------------------------------------------------------------->
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<section data-transition="fade" data-transition-speed="slow">
+  <h3>Installing Express</h3>
+  <ul>
+    <li>Because Express is a framework that sits on top of Node, you'll need to make sure you have Node installed.</li>
+    <li>Simple instructions here: http://expressjs.com/starter/installing.html</li>
+  </ul>
+  <!--@formatter:off-->
+  <pre><code contenteditable style="font-size: 18px; margin-top: 20px;">
+    $ mkdir myapp
+    $ cd myapp
+    $ npm init
+    $ npm install express --save
+  </code></pre>
+<!--@formatter:on-->
+  <aside class="notes" data-markdown="">
+  </aside>
+</section>
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<!-- Sample Code: Express hello --------------------------------------------------------------------------------------->
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<section data-transition="fade" data-transition-speed="slow">
+  <h3>Sample Code: hello using Express.JS</h3>
+  <ul>
+    <li>Demos a simple Node/Express application which responses to a web request with a text message</li>
+    <li>Available here: https://github.com/cjus/nodejs-presentation/tree/master/NodeJSProjects/web/simple</li>
+  </ul>
+  <!--@formatter:off-->
+    <pre><code contenteditable style="font-size: 18px; margin-top: 20px;">
+var express = require('express')
+var app = express();
+
+app.get('/', function(req, res) {
+  res.send('Hello World');
+});
+
+app.listen(3000);
+    </code></pre>
+  <!--@formatter:on-->
+  <aside class="notes" data-markdown="">
+  </aside>
+</section>
+
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<!-- Installing Express Generator  ------------------------------------------------------------------------------------>
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<section data-transition="fade" data-transition-speed="slow">
+  <h3>Installing Express Generator</h3>
+  <ul>
+    <li>Express Generator is a Node based commandline program which can generate the basic skeleton of a non-trivial web
+      application
+    </li>
+    <li>This saves you from building boilerplate code common to most web server applications you'll build</li>
+    <li>Simple instructions here: http://expressjs.com/starter/generator.html</li>
+  </ul>
+  <!--@formatter:off-->
+<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">
+$ mkdir myapp
+$ cd myapp
+$ npm init
+$ npm install express-generator -g
+
+Then you can use express-generator:
+
+$ express myapp
+</code></pre>
+<!--@formatter:on-->
+  <aside class="notes" data-markdown="">
+  </aside>
+</section>
+
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<!-- Sample Code: login ----------------------------------------------------------------------------------------------->
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<section data-transition="fade" data-transition-speed="slow">
+  <h3>Sample Code: Login</h3>
+  <ul>
+    <li>Demos how to build a Node and Express web application</li>
+    <li>Demos how to serve web pages and handle RESTFul API calls</li>
+    <li>Available here: https://github.com/cjus/nodejs-presentation/tree/master/NodeJSProjects/web</li>
   </ul>
   <aside class="notes" data-markdown="">
   </aside>

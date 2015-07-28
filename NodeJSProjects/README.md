@@ -14,10 +14,3 @@ There are many other usecases NOT covered in this sample:
 * NodeJS as a communication server (i.e. using websockets)
 * NodeBots and more!
 
-### Installing NodeJS
-
-Visit https://nodejs.org/ and install the latest version of NodeJS.
-
-### Installing Express
-
-In order to configure NodeJS for use as a web and API server we'll use the Express framework. 
