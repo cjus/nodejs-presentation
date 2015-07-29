@@ -287,7 +287,7 @@
 <!-- Sample Code: hello ----------------------------------------------------------------------------------------------->
 <!-- ------------------------------------------------------------------------------------------------------------------>
 <section data-transition="fade" data-transition-speed="slow">
-  <h3>Sample Code: hello using Express.JS</h3>
+  <h3>Sample Code: hello using Node</h3>
   <ul>
     <li>Demos a simple Node application which responses to a web request with a text message</li>
   </ul>
@@ -295,8 +295,8 @@
 <pre><code contenteditable style="font-size: 18px; margin-top: 20px;">
 var http = require('http');
 http.createServer(function (req, res) {
-res.writeHead(200, {'Content-Type': 'text/plain'});
-res.end('Hello World\n');
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello World\n');
 }).listen(1337, '127.0.0.1');
 console.log('Server running at http://127.0.0.1:1337/');
 </code></pre>
