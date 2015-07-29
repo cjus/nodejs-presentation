@@ -282,6 +282,7 @@
   </aside>
 </section>
 
+
 <!-- ------------------------------------------------------------------------------------------------------------------>
 <!-- Sample Code: hello ----------------------------------------------------------------------------------------------->
 <!-- ------------------------------------------------------------------------------------------------------------------>
@@ -291,14 +292,14 @@
     <li>Demos a simple Node application which responses to a web request with a text message</li>
   </ul>
   <!--@formatter:off-->
-  <pre><code contenteditable style="font-size: 18px; margin-top: 20px;">
+<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">
 var http = require('http');
 http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Hello World\n');
+res.writeHead(200, {'Content-Type': 'text/plain'});
+res.end('Hello World\n');
 }).listen(1337, '127.0.0.1');
 console.log('Server running at http://127.0.0.1:1337/');
-  </code></pre>
+</code></pre>
 <!--@formatter:on-->
   <aside class="notes" data-markdown="">
   </aside>
@@ -325,7 +326,7 @@ console.log('Server running at http://127.0.0.1:1337/');
 <section data-transition="fade" data-transition-speed="slow">
   <h3>Building web applications using Node</h3>
   <ul>
-    <li>Express.JS isa Fast, unopinionated, minimalist web framework for Node.js</li>
+    <li>Express.JS is a Fast, unopinionated, minimalist web framework for Node.js</li>
     <li>Express is a framework that handles much of the functionality found in web servers</li>
     <li>Available at: http://expressjs.com/</li>
   </ul>
@@ -339,16 +340,17 @@ console.log('Server running at http://127.0.0.1:1337/');
 <section data-transition="fade" data-transition-speed="slow">
   <h3>Installing Express</h3>
   <ul>
-    <li>Because Express is a framework that sits on top of Node, you'll need to make sure you have Node installed.</li>
+    <li>Because Express is a framework that sits on top of Node, you'll need to make sure you have Node installed.
+    </li>
     <li>Simple instructions here: http://expressjs.com/starter/installing.html</li>
   </ul>
   <!--@formatter:off-->
-  <pre><code contenteditable style="font-size: 18px; margin-top: 20px;">
-    $ mkdir myapp
-    $ cd myapp
-    $ npm init
-    $ npm install express --save
-  </code></pre>
+<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">
+  $ mkdir myapp
+  $ cd myapp
+  $ npm init
+  $ npm install express --save
+</code></pre>
 <!--@formatter:on-->
   <aside class="notes" data-markdown="">
   </aside>
